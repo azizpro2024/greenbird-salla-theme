@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+*.zip
+preview-server.mjs
+theme-cover.png
+theme-cover-1200x750.png
+theme-icon.png
+theme-icon.svg
+src/assets/images/products/orange-product.jpg

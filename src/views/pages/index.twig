@@ -1,0 +1,153 @@
+{% extends 'layouts/master.twig' %}
+
+{% block content %}
+  <!-- Hero 3-Zone Floating Showcase -->
+  {% include 'components/hero-showcase.twig' %}
+
+  <!-- Store Sections Container (Same Luxury Floating Language) -->
+  <div class="gb-store-sections" id="gb-dynamic-view">
+    <!-- 6.1 Category Strip -->
+    <section class="gb-section" id="section-categories">
+      <div class="gb-section-head">
+        <div>
+          <h2 class="gb-section-title" data-i18n="categories.title">{{ trans('categories.title') }}</h2>
+          <p class="gb-section-subtitle" data-i18n="categories.subtitle">{{ trans('categories.subtitle') }}</p>
+        </div>
+        <a href="#/shop" class="gb-text-link" data-i18n="sections.view_all">{{ trans('sections.view_all') }}</a>
+      </div>
+      <div class="gb-categories-strip" id="gb-categories-strip"></div>
+    </section>
+
+    <!-- 6.2 Featured Products (4-Card Grid) -->
+    <section class="gb-section" id="section-featured">
+      <div class="gb-section-head">
+        <div>
+          <h2 class="gb-section-title" data-i18n="sections.featured_title">{{ trans('sections.featured_title') }}</h2>
+          <p class="gb-section-subtitle" data-i18n="sections.featured_subtitle">{{ trans('sections.featured_subtitle') }}</p>
+        </div>
+        <a href="#/shop" class="gb-text-link" data-i18n="sections.view_all">{{ trans('sections.view_all') }}</a>
+      </div>
+      <div class="gb-product-grid" id="gb-featured-grid"></div>
+    </section>
+
+    <!-- 6.4 Special Offers Banner with Live Countdown -->
+    <section class="gb-section" id="section-promo">
+      <div class="gb-promo-banner">
+        <div class="gb-promo-content">
+          <span class="gb-promo-eyebrow" data-i18n="promo.eyebrow">{{ trans('promo.eyebrow') }}</span>
+          <h2 class="gb-promo-title" data-i18n="promo.title">{{ trans('promo.title') }}</h2>
+          <p class="gb-promo-desc" data-i18n="promo.subtitle">{{ trans('promo.subtitle') }}</p>
+          <div class="gb-countdown" id="gb-promo-countdown">
+            <div class="gb-cd-box"><strong id="cd-days">03</strong><span data-i18n="promo.days">{{ trans('promo.days') }}</span></div>
+            <div class="gb-cd-box"><strong id="cd-hours">14</strong><span data-i18n="promo.hours">{{ trans('promo.hours') }}</span></div>
+            <div class="gb-cd-box"><strong id="cd-mins">42</strong><span data-i18n="promo.minutes">{{ trans('promo.minutes') }}</span></div>
+            <div class="gb-cd-box"><strong id="cd-secs">19</strong><span data-i18n="promo.seconds">{{ trans('promo.seconds') }}</span></div>
+          </div>
+          <a href="#/offers" class="gb-cta-capsule">
+            <span data-i18n="promo.cta">{{ trans('promo.cta') }}</span>
+            <svg class="gb-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="gb-promo-visual">
+          <img src="{{ 'images/products/crimson-court.png'|asset }}" alt="Special Offer Sneaker" class="gb-promo-shoe" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.3 Best Sellers -->
+    <section class="gb-section" id="section-bestsellers">
+      <div class="gb-section-head">
+        <div>
+          <h2 class="gb-section-title" data-i18n="sections.bestsellers_title">{{ trans('sections.bestsellers_title') }}</h2>
+          <p class="gb-section-subtitle" data-i18n="sections.bestsellers_subtitle">{{ trans('sections.bestsellers_subtitle') }}</p>
+        </div>
+        <a href="#/shop?sort=bestseller" class="gb-text-link" data-i18n="sections.view_all">{{ trans('sections.view_all') }}</a>
+      </div>
+      <div class="gb-product-grid" id="gb-bestsellers-grid"></div>
+    </section>
+
+    <!-- 6.5 New Arrivals -->
+    <section class="gb-section" id="section-new-arrivals">
+      <div class="gb-section-head">
+        <div>
+          <h2 class="gb-section-title" data-i18n="sections.new_arrivals_title">{{ trans('sections.new_arrivals_title') }}</h2>
+          <p class="gb-section-subtitle" data-i18n="sections.new_arrivals_subtitle">{{ trans('sections.new_arrivals_subtitle') }}</p>
+        </div>
+        <a href="#/shop?sort=newest" class="gb-text-link" data-i18n="sections.view_all">{{ trans('sections.view_all') }}</a>
+      </div>
+      <div class="gb-product-grid" id="gb-new-arrivals-grid"></div>
+    </section>
+
+    <!-- 6.6 Why Choose Us -->
+    <section class="gb-section" id="section-features">
+      <div class="gb-section-head">
+        <div>
+          <h2 class="gb-section-title" data-i18n="features.title">{{ trans('features.title') }}</h2>
+          <p class="gb-section-subtitle" data-i18n="features.subtitle">{{ trans('features.subtitle') }}</p>
+        </div>
+      </div>
+      <div class="gb-features-grid">
+        <article class="gb-glass-card gb-feature-card">
+          <div class="gb-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 data-i18n="features.shipping_title">{{ trans('features.shipping_title') }}</h3>
+          <p data-i18n="features.shipping_desc">{{ trans('features.shipping_desc') }}</p>
+        </article>
+        <article class="gb-glass-card gb-feature-card">
+          <div class="gb-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 data-i18n="features.payment_title">{{ trans('features.payment_title') }}</h3>
+          <p data-i18n="features.payment_desc">{{ trans('features.payment_desc') }}</p>
+        </article>
+        <article class="gb-glass-card gb-feature-card">
+          <div class="gb-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          </div>
+          <h3 data-i18n="features.returns_title">{{ trans('features.returns_title') }}</h3>
+          <p data-i18n="features.returns_desc">{{ trans('features.returns_desc') }}</p>
+        </article>
+        <article class="gb-glass-card gb-feature-card">
+          <div class="gb-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          </div>
+          <h3 data-i18n="features.support_title">{{ trans('features.support_title') }}</h3>
+          <p data-i18n="features.support_desc">{{ trans('features.support_desc') }}</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6.7 Customer Testimonials -->
+    <section class="gb-section" id="section-testimonials">
+      <div class="gb-section-head">
+        <div>
+          <h2 class="gb-section-title" data-i18n="testimonials.title">{{ trans('testimonials.title') }}</h2>
+          <p class="gb-section-subtitle" data-i18n="testimonials.subtitle">{{ trans('testimonials.subtitle') }}</p>
+        </div>
+      </div>
+      <div class="gb-testimonials-grid" id="gb-testimonials-grid"></div>
+    </section>
+
+    <!-- 6.8 Newsletter -->
+    <section class="gb-section" id="section-newsletter">
+      <div class="gb-newsletter-panel">
+        <div class="gb-newsletter-info">
+          <div class="gb-feature-icon gb-newsletter-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="gb-newsletter-text">
+            <h2 data-i18n="newsletter.title">{{ trans('newsletter.title') }}</h2>
+            <p data-i18n="newsletter.subtitle">{{ trans('newsletter.subtitle') }}</p>
+          </div>
+        </div>
+        <form class="gb-newsletter-form" id="gb-newsletter-form">
+          <input type="email" required data-i18n-placeholder="newsletter.placeholder" placeholder="{{ trans('newsletter.placeholder') }}" aria-label="{{ trans('newsletter.placeholder') }}" />
+          <button type="submit" class="gb-cta-capsule" data-i18n="newsletter.cta">{{ trans('newsletter.cta') }}</button>
+        </form>
+      </div>
+    </section>
+  </div>
+{% endblock %}

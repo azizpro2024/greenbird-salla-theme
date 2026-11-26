@@ -1,0 +1,106 @@
+<section class="gb-hero-section" aria-label="{{ trans('hero.badge') }}">
+  <!-- Floating Luxury Glass Panel -->
+  <div class="gb-floating-panel" id="gb-hero-panel" data-variant="orange">
+    <div class="gb-hero-grid">
+      <!-- Zone 1: Featured Product Info & CTA -->
+      <div class="gb-hero-info">
+        <span class="gb-hero-category-pill">
+          <span class="gb-dot"></span>
+          <span id="gb-hero-cat-label">{{ theme.settings.get('hero_category_label')|default('أحذية كرة سلة') }}</span>
+        </span>
+
+        <h1 class="gb-hero-title" id="gb-hero-title">
+          {{ theme.settings.get('hero_title')|default('حذاء كرة سلة أندر آرمر الاحترافي') }}
+        </h1>
+
+        <p class="gb-hero-desc" id="gb-hero-desc">
+          {{ theme.settings.get('hero_description')|default('خامة شبكية قابلة للتنفس مع طبقات جلدية لدعم ومتانة إضافية، نعل أوسط خفيف ومستجيب، ونعل خارجي مطاطي متين بنقشة متعرجة لحركة وتحكم مثالي داخل الملعب.') }}
+        </p>
+
+        <div class="gb-hero-cta-row">
+          <a href="{{ theme.settings.get('hero_cta_url')|default('#/product/ua-basketball-pro') }}" class="gb-cta-capsule" id="gb-hero-cta">
+            <span>{{ theme.settings.get('hero_cta_text')|default('تسوق الآن') }}</span>
+            <svg class="gb-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+          <button type="button" class="gb-hero-secondary-btn" id="gb-hero-quick-add">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 12H5L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            <span data-i18n="product.add_to_cart">{{ trans('product.add_to_cart') }}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Zone 2: Large Floating Center Product Image -->
+      <div class="gb-hero-visual">
+        <div class="gb-hero-glow" id="gb-hero-glow"></div>
+        <div class="gb-shoe-float-wrap">
+          <img
+            src="{{ 'images/products/orange-product.png'|asset }}"
+            alt="Under Armour Basketball Shoe"
+            class="gb-hero-shoe-img"
+            id="gb-hero-image"
+          />
+        </div>
+        <div class="gb-shoe-shadow" aria-hidden="true"></div>
+      </div>
+
+      <!-- Zone 3: Price, Size Selector & Variant Controls -->
+      <div class="gb-hero-controls">
+        <div class="gb-price-block">
+          <div class="gb-price-row">
+            <span class="gb-price-current"><span class="gb-price-val">49.95 <svg class="gb-sar-icon" viewBox="0 0 1124.14 1256.39" fill="currentColor" aria-label="ريال سعودي"><path d="M699.62 1113.02h0c-20.06 44.48-33.32 92.75-38.4 143.37l424.51-90.24c20.06-44.47 33.31-92.75 38.4-143.37l-424.51 90.24ZM1085.73 895.8c20.06-44.47 33.32-92.75 38.4-143.37l-330.68 70.33v-135.2l292.27-62.11c20.06-44.47 33.32-92.75 38.4-143.37l-330.68 70.27V66.13c-50.67 28.45-95.67 66.32-132.25 110.99v403.35l-132.25 28.11V0c-50.67 28.44-95.67 66.32-132.25 110.99v525.69l-295.91 62.88c-20.06 44.47-33.33 92.75-38.42 143.37l334.33-71.05v170.26l-358.3 76.14c-20.06 44.47-33.32 92.75-38.4 143.37l375.04-79.7c30.53-6.35 56.77-24.4 73.83-49.24l68.78-101.97v-.02c7.14-10.55 11.3-23.27 11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/></svg></span></span>
+            <span class="gb-discount-pill">10% <span data-i18n="hero.discount_suffix">{{ trans('hero.discount_suffix') }}</span></span>
+          </div>
+          <span class="gb-price-old"><span class="gb-price-val">55.50 <svg class="gb-sar-icon" viewBox="0 0 1124.14 1256.39" fill="currentColor" aria-label="ريال سعودي"><path d="M699.62 1113.02h0c-20.06 44.48-33.32 92.75-38.4 143.37l424.51-90.24c20.06-44.47 33.31-92.75 38.4-143.37l-424.51 90.24ZM1085.73 895.8c20.06-44.47 33.32-92.75 38.4-143.37l-330.68 70.33v-135.2l292.27-62.11c20.06-44.47 33.32-92.75 38.4-143.37l-330.68 70.27V66.13c-50.67 28.45-95.67 66.32-132.25 110.99v403.35l-132.25 28.11V0c-50.67 28.44-95.67 66.32-132.25 110.99v525.69l-295.91 62.88c-20.06 44.47-33.33 92.75-38.42 143.37l334.33-71.05v170.26l-358.3 76.14c-20.06 44.47-33.32 92.75-38.4 143.37l375.04-79.7c30.53-6.35 56.77-24.4 73.83-49.24l68.78-101.97v-.02c7.14-10.55 11.3-23.27 11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/></svg></span></span>
+        </div>
+
+        <div class="gb-control-group">
+          <span class="gb-control-label" data-i18n="hero.size_label">{{ trans('hero.size_label') }}</span>
+          <div class="gb-size-grid" id="gb-hero-sizes">
+            <button type="button" class="gb-size-btn" data-size="40">40</button>
+            <button type="button" class="gb-size-btn" data-size="41">41</button>
+            <button type="button" class="gb-size-btn is-active" data-size="42">42</button>
+            <button type="button" class="gb-size-btn" data-size="43">43</button>
+            <button type="button" class="gb-size-btn" data-size="44">44</button>
+            <button type="button" class="gb-size-btn" data-size="45">45</button>
+          </div>
+        </div>
+
+        <div class="gb-control-group">
+          <span class="gb-control-label" data-i18n="hero.color_label">{{ trans('hero.color_label') }}</span>
+          <div class="gb-color-swatches" id="gb-hero-colors">
+            <button type="button" class="gb-color-swatch is-active" data-color="orange" style="--swatch:#FF6B1A" aria-label="Orange"></button>
+            <button type="button" class="gb-color-swatch" data-color="black" style="--swatch:#222328" aria-label="Black"></button>
+            <button type="button" class="gb-color-swatch" data-color="white" style="--swatch:#F1F5F9" aria-label="White"></button>
+            <button type="button" class="gb-color-swatch" data-color="pink" style="--swatch:#EC4899" aria-label="Pink"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Secondary Preview Thumbnails + Autoplay Indicator -->
+    <div class="gb-hero-footer-bar">
+      <div class="gb-variant-thumbs" id="gb-hero-thumbs">
+        <button type="button" class="gb-thumb-btn is-active" data-color="orange">
+          <img src="{{ 'images/products/orange-product.png'|asset }}" alt="Orange variant" />
+        </button>
+        <button type="button" class="gb-thumb-btn" data-color="black">
+          <img src="{{ 'images/products/black-product.png'|asset }}" alt="Black variant" />
+        </button>
+        <button type="button" class="gb-thumb-btn" data-color="white">
+          <img src="{{ 'images/products/white-product.png'|asset }}" alt="White variant" />
+        </button>
+        <button type="button" class="gb-thumb-btn" data-color="pink">
+          <img src="{{ 'images/products/pink-product.png'|asset }}" alt="Pink variant" />
+        </button>
+      </div>
+
+      <button type="button" class="gb-autoplay-pill" id="gb-autoplay-toggle" aria-pressed="true">
+        <span class="gb-pulse-dot"></span>
+        <span id="gb-autoplay-label">{{ trans('hero.autoplay_on') }}</span>
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ user.language.code|default('ar') }}" dir="{{ user.language.dir|default('rtl') }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title|default(trans('meta.store_name') ~ ' — ' ~ trans('meta.store_tagline')) }}</title>
+  <meta name="description" content="{{ trans('meta.store_description') }}" />
+
+  <!-- Salla Modern Geometric Arabic & English Fonts (Alexandria + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  {{ hook('head:styles') }}
+  <link rel="stylesheet" href="{{ 'styles/theme.css'|asset }}" />
+  <style id="gb-theme-vars">
+    :root {
+      --bg-top: {{ theme.settings.get('primary_gradient_start')|default('#FF6B1A') }};
+      --bg-bottom: {{ theme.settings.get('primary_gradient_end')|default('#FFB830') }};
+      --btn-bg: {{ theme.settings.get('button_bg_color')|default('#FFFFFF') }};
+      --btn-color: {{ theme.settings.get('button_text_color')|default('#181412') }};
+      --header-bg: {{ theme.settings.get('header_bg_color')|default('#140F0D') }};
+      --footer-bg: {{ theme.settings.get('footer_bg_color')|default('#120D0B') }};
+    }
+  </style>
+  <script>
+    window.SALLA_THEME_CONFIG = {
+      brandName: "{{ theme.settings.get('brand_name')|default('GreenBird') }}",
+      brandLogo: "{{ theme.settings.get('brand_logo')|default('') }}",
+      brandTagline: "{{ theme.settings.get('brand_tagline')|default('أداء استثنائي في كل خطوة') }}",
+      heroShow: true,
+      showCategories: true,
+      showFeatured: true,
+      showPromo: true,
+      showBestsellers: true,
+      showNewArrivals: true,
+      showFeatures: true,
+      showTestimonials: true,
+      showNewsletter: true,
+      featuredCount: 4,
+      bestsellersCount: 4,
+      newArrivalsCount: 4
+    };
+  </script>
+</head>
+<body class="gb-body" data-theme-variant="orange">
+  <!-- Full-Screen Luxury Orange-to-Gold Atmospheric Backdrop -->
+  <div class="gb-outer-backdrop" aria-hidden="true">
+    <div class="gb-ambient-orb gb-orb-top"></div>
+    <div class="gb-ambient-orb gb-orb-bottom"></div>
+  </div>
+
+  <!-- Main Store Wrapper -->
+  <div class="gb-shell">
+    {% include 'components/header.twig' %}
+
+    <main id="main-content" class="gb-main">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include 'components/footer.twig' %}
+  </div>
+
+  <!-- Interactive Drawers & Search Overlay -->
+  {% include 'components/cart-drawer.twig' %}
+
+  {{ hook('body:end') }}
+  <script src="{{ 'scripts/store-data.js'|asset }}"></script>
+  <script src="{{ 'scripts/theme.js'|asset }}"></script>
+</body>
+</html>

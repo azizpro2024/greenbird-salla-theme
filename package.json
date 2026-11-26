@@ -1,0 +1,17 @@
+{
+  "name": "greenbird-salla-twilight-theme",
+  "version": "1.0.0",
+  "description": "Premium Animated Full-Store Salla Twilight Theme (Arabic RTL First + English LTR)",
+  "scripts": {
+    "preview": "node preview-server.mjs",
+    "build": "node build-preview.mjs"
+  },
+  "keywords": [
+    "salla",
+    "twilight",
+    "ecommerce",
+    "rtl",
+    "sneakers"
+  ],
+  "license": "MIT"
+}

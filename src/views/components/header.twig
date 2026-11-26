@@ -1,0 +1,70 @@
+<header class="gb-header" role="banner">
+  <div class="gb-header-inner">
+    <!-- Store Logo (Real SVG or Theme Editor custom logo) -->
+    <a href="#/" class="gb-logo-link" data-nav="home" aria-label="{{ theme.settings.get('brand_name')|default('GreenBird') }}">
+      <img src="{{ theme.settings.get('brand_logo')|default('images/logo.svg'|asset) }}" alt="{{ theme.settings.get('brand_name')|default('GreenBird') }}" class="gb-logo-img" id="gb-header-logo" width="176" height="45" />
+    </a>
+
+    <!-- Center Capsule Pill Navigation -->
+    <nav class="gb-pill-nav" aria-label="{{ trans('nav.home') }}">
+      <a href="#/" class="gb-pill-item is-active" data-nav="home">{{ trans('nav.home') }}</a>
+      <a href="#/shop" class="gb-pill-item" data-nav="shop">{{ trans('nav.shop') }}</a>
+      <a href="#/categories" class="gb-pill-item" data-nav="categories">{{ trans('nav.categories') }}</a>
+      <a href="#/offers" class="gb-pill-item" data-nav="offers">{{ trans('nav.offers') }}</a>
+      <a href="#/about" class="gb-pill-item" data-nav="about">{{ trans('nav.about') }}</a>
+      <a href="#/contact" class="gb-pill-item" data-nav="contact">{{ trans('nav.contact') }}</a>
+    </nav>
+
+    <!-- Right-side Linear Action Icons + Language Switcher -->
+    <div class="gb-header-actions">
+      <div class="gb-lang-wrap">
+        <button type="button" class="gb-icon-btn gb-lang-icon-btn" id="gb-lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="{{ trans('header.language_switch') }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            <path d="M2 12h20"/>
+          </svg>
+          <span class="gb-lang-mini-code" id="gb-lang-mini-code">AR</span>
+        </button>
+        <div class="gb-lang-popover" id="gb-lang-popover" role="menu" aria-hidden="true">
+          <button type="button" class="gb-lang-option is-active" data-set-lang="ar" role="menuitem">
+            <span>العربية</span>
+            <span class="gb-lang-meta">RTL</span>
+          </button>
+          <button type="button" class="gb-lang-option" data-set-lang="en" role="menuitem">
+            <span>English</span>
+            <span class="gb-lang-meta">LTR</span>
+          </button>
+        </div>
+      </div>
+
+      <button type="button" class="gb-icon-btn" id="gb-search-trigger" aria-label="{{ trans('header.search') }}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="m20 20-3.5-3.5"/>
+        </svg>
+      </button>
+
+      <button type="button" class="gb-icon-btn" id="gb-wishlist-trigger" aria-label="{{ trans('header.wishlist') }}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20.5s-7.5-4.7-9.5-9C.9 8.1 3 4.5 6.8 4.5c2.1 0 3.9 1.1 5.2 2.8 1.3-1.7 3.1-2.8 5.2-2.8 3.8 0 5.9 3.6 4.3 7-2 4.3-9.5 9-9.5 9Z"/>
+        </svg>
+        <span class="gb-badge" id="gb-wishlist-count" hidden>0</span>
+      </button>
+
+      <button type="button" class="gb-cart-pill" id="gb-cart-trigger" aria-label="{{ trans('header.cart') }}">
+        <svg class="gb-cart-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 7h12l1.2 12.5a1.5 1.5 0 0 1-1.5 1.5H6.3a1.5 1.5 0 0 1-1.5-1.5L6 7Z"/>
+          <path d="M9 7a3 3 0 0 1 6 0"/>
+        </svg>
+        <span class="gb-cart-pill-count" id="gb-cart-count">0</span>
+      </button>
+
+      <button type="button" class="gb-icon-btn gb-mobile-menu-btn" id="gb-mobile-menu-trigger" aria-label="{{ trans('header.menu') }}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

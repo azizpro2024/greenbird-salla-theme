@@ -1,0 +1,325 @@
+{
+  "name": {
+    "ar": "قالب GreenBird الفاخر",
+    "en": "GreenBird Luxury Theme"
+  },
+  "version": "1.0.0",
+  "description": {
+    "ar": "قالب متجر سلة فاخر ومتحرك قابل للتخصيص بالكامل من محرر القوالب بدون كود، عربي RTL أولا مع دعم الإنجليزية LTR.",
+    "en": "Luxury animated Salla Twilight theme, 100% customizable from the Theme Editor with zero code, Arabic RTL-first with English LTR."
+  },
+  "author": "GreenBird Studio",
+  "repository": "https://github.com/greenbird/salla-luxury-theme",
+  "features": [
+    "component-home-slider",
+    "component-featured-products",
+    "component-categories",
+    "component-offers",
+    "component-testimonials",
+    "component-newsletter",
+    "breadcrumb",
+    "wishlist",
+    "quick-view",
+    "rtl-ltr-switcher"
+  ],
+  "settings": [
+    {
+      "id": "brand_name",
+      "type": "string",
+      "label": { "ar": "اسم المتجر", "en": "Store Name" },
+      "default": "GreenBird"
+    },
+    {
+      "id": "brand_logo",
+      "type": "image",
+      "label": { "ar": "شعار المتجر (PNG/SVG شفاف، 220×56 بكسل)", "en": "Store Logo (Transparent PNG/SVG, 220×56px)" },
+      "default": ""
+    },
+    {
+      "id": "brand_tagline",
+      "type": "string",
+      "label": { "ar": "الشعار التسويقي", "en": "Marketing Tagline" },
+      "default": "أداء استثنائي في كل خطوة"
+    },
+    {
+      "id": "brand_description",
+      "type": "string",
+      "label": { "ar": "وصف المتجر (للفوتر)", "en": "Store Description (Footer)" },
+      "default": "متجر متخصص في الأحذية الرياضية الفاخرة بتقنيات أداء عالمية."
+    },
+    {
+      "id": "primary_gradient_start",
+      "type": "color",
+      "label": { "ar": "لون الخلفية العلوي", "en": "Outer Gradient Top Color" },
+      "default": "#FF6B1A"
+    },
+    {
+      "id": "primary_gradient_end",
+      "type": "color",
+      "label": { "ar": "لون الخلفية السفلي الذهبي", "en": "Outer Gradient Bottom Gold" },
+      "default": "#FFB830"
+    },
+    {
+      "id": "button_bg_color",
+      "type": "color",
+      "label": { "ar": "لون الأزرار الرئيسية", "en": "Primary Button Background" },
+      "default": "#FFFFFF"
+    },
+    {
+      "id": "button_text_color",
+      "type": "color",
+      "label": { "ar": "لون نص الأزرار الرئيسية", "en": "Primary Button Text Color" },
+      "default": "#181412"
+    },
+    {
+      "id": "header_bg_color",
+      "type": "color",
+      "label": { "ar": "لون خلفية الهيدر", "en": "Header Background Color" },
+      "default": "#140F0D"
+    },
+    {
+      "id": "footer_bg_color",
+      "type": "color",
+      "label": { "ar": "لون خلفية الفوتر", "en": "Footer Background Color" },
+      "default": "#120D0B"
+    },
+    {
+      "id": "font_family",
+      "type": "select",
+      "label": { "ar": "خط المتجر (من خطوط سلة)", "en": "Store Font (Salla Fonts)" },
+      "default": "Alexandria",
+      "options": [
+        { "label": { "ar": "Alexandria (هندسي فاخر)", "en": "Alexandria" }, "value": "Alexandria" },
+        { "label": { "ar": "DIN Next LT Arabic", "en": "DIN Next LT Arabic" }, "value": "DIN Next LT Arabic" },
+        { "label": { "ar": "Cairo", "en": "Cairo" }, "value": "Cairo" },
+        { "label": { "ar": "Readex Pro", "en": "Readex Pro" }, "value": "Readex Pro" }
+      ]
+    },
+    {
+      "id": "heading_scale",
+      "type": "select",
+      "label": { "ar": "حجم العناوين", "en": "Heading Size Scale" },
+      "default": "medium",
+      "options": [
+        { "label": { "ar": "صغير", "en": "Small" }, "value": "small" },
+        { "label": { "ar": "متوسط (افتراضي)", "en": "Medium (Default)" }, "value": "medium" },
+        { "label": { "ar": "كبير", "en": "Large" }, "value": "large" }
+      ]
+    },
+    {
+      "id": "hero_show",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم البطل الرئيسي", "en": "Show Hero Section" },
+      "default": true
+    },
+    {
+      "id": "hero_category_label",
+      "type": "string",
+      "label": { "ar": "تصنيف منتج البطل", "en": "Hero Category Label" },
+      "default": "أحذية كرة سلة"
+    },
+    {
+      "id": "hero_title",
+      "type": "string",
+      "label": { "ar": "عنوان البطل الرئيسي", "en": "Hero Headline" },
+      "default": "حذاء كرة سلة أندر آرمر الاحترافي"
+    },
+    {
+      "id": "hero_description",
+      "type": "string",
+      "label": { "ar": "وصف البطل", "en": "Hero Description" },
+      "default": "خامة شبكية قابلة للتنفس مع طبقات جلدية لدعم ومتانة إضافية، نعل أوسط خفيف ومستجيب، ونعل خارجي مطاطي متين بنقشة متعرجة لحركة وتحكم مثالي داخل الملعب."
+    },
+    {
+      "id": "hero_image",
+      "type": "image",
+      "label": { "ar": "صورة منتج البطل (PNG شفاف، 1000×1000 بكسل)", "en": "Hero Product Image (Transparent PNG, 1000×1000px)" },
+      "default": ""
+    },
+    {
+      "id": "hero_price",
+      "type": "string",
+      "label": { "ar": "سعر منتج البطل", "en": "Hero Product Price" },
+      "default": "49.95"
+    },
+    {
+      "id": "hero_old_price",
+      "type": "string",
+      "label": { "ar": "السعر الأصلي قبل الخصم (اختياري)", "en": "Hero Original Price (Optional)" },
+      "default": "55.50"
+    },
+    {
+      "id": "hero_cta_text",
+      "type": "string",
+      "label": { "ar": "نص زر البطل الرئيسي", "en": "Hero Primary CTA Text" },
+      "default": "تسوق الآن"
+    },
+    {
+      "id": "hero_cta_url",
+      "type": "string",
+      "label": { "ar": "رابط زر البطل الرئيسي", "en": "Hero Primary CTA URL" },
+      "default": "#/product/ua-basketball-pro"
+    },
+    {
+      "id": "hero_autoplay",
+      "type": "boolean",
+      "label": { "ar": "تشغيل تلقائي لكاروسيل ألوان البطل", "en": "Hero Variant Autoplay" },
+      "default": true
+    },
+    {
+      "id": "hero_autoplay_interval",
+      "type": "number",
+      "label": { "ar": "مدة التبديل التلقائي (مللي ثانية)", "en": "Autoplay Interval (ms)" },
+      "default": 3200
+    },
+    {
+      "id": "show_categories",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم التصنيفات", "en": "Show Categories Section" },
+      "default": true
+    },
+    {
+      "id": "show_featured",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم المنتجات المميزة", "en": "Show Featured Products" },
+      "default": true
+    },
+    {
+      "id": "featured_count",
+      "type": "number",
+      "label": { "ar": "عدد المنتجات المميزة", "en": "Featured Products Count" },
+      "default": 4
+    },
+    {
+      "id": "show_promo",
+      "type": "boolean",
+      "label": { "ar": "إظهار بانر العروض الخاصة", "en": "Show Promo Banner" },
+      "default": true
+    },
+    {
+      "id": "promo_title",
+      "type": "string",
+      "label": { "ar": "عنوان بانر العروض", "en": "Promo Banner Title" },
+      "default": "تخفيضات الأداء الاحترافي"
+    },
+    {
+      "id": "promo_cta_url",
+      "type": "string",
+      "label": { "ar": "رابط زر بانر العروض", "en": "Promo Banner Link" },
+      "default": "#/offers"
+    },
+    {
+      "id": "promo_image",
+      "type": "image",
+      "label": { "ar": "صورة بانر العروض (PNG شفاف، 800×800 بكسل)", "en": "Promo Banner Image (Transparent PNG, 800×800px)" },
+      "default": ""
+    },
+    {
+      "id": "show_bestsellers",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم الأكثر مبيعاً", "en": "Show Best Sellers" },
+      "default": true
+    },
+    {
+      "id": "bestsellers_count",
+      "type": "number",
+      "label": { "ar": "عدد منتجات الأكثر مبيعاً", "en": "Best Sellers Count" },
+      "default": 4
+    },
+    {
+      "id": "show_new_arrivals",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم وصل حديثاً", "en": "Show New Arrivals" },
+      "default": true
+    },
+    {
+      "id": "new_arrivals_count",
+      "type": "number",
+      "label": { "ar": "عدد منتجات وصل حديثاً", "en": "New Arrivals Count" },
+      "default": 4
+    },
+    {
+      "id": "show_features",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم لماذا تختارنا", "en": "Show Why Choose Us" },
+      "default": true
+    },
+    {
+      "id": "show_testimonials",
+      "type": "boolean",
+      "label": { "ar": "إظهار قسم آراء العملاء", "en": "Show Testimonials" },
+      "default": true
+    },
+    {
+      "id": "show_newsletter",
+      "type": "boolean",
+      "label": { "ar": "إظهار النشرة البريدية", "en": "Show Newsletter" },
+      "default": true
+    },
+    {
+      "id": "social_instagram",
+      "type": "string",
+      "label": { "ar": "رابط انستقرام (اختياري)", "en": "Instagram URL (optional)" },
+      "default": ""
+    },
+    {
+      "id": "social_facebook",
+      "type": "string",
+      "label": { "ar": "رابط فيسبوك (اختياري)", "en": "Facebook URL (optional)" },
+      "default": ""
+    },
+    {
+      "id": "social_tiktok",
+      "type": "string",
+      "label": { "ar": "رابط تيك توك (اختياري)", "en": "TikTok URL (optional)" },
+      "default": ""
+    }
+  ],
+  "components": [
+    {
+      "key": "hero-showcase",
+      "title": { "ar": "قسم البطل الثلاثي المتحرك", "en": "3-Zone Animated Hero Showcase" },
+      "path": "home.hero-showcase"
+    },
+    {
+      "key": "category-strip",
+      "title": { "ar": "شريط التصنيفات", "en": "Category Strip" },
+      "path": "home.category-strip"
+    },
+    {
+      "key": "featured-products",
+      "title": { "ar": "المنتجات المميزة", "en": "Featured Products" },
+      "path": "home.featured-products"
+    },
+    {
+      "key": "best-sellers",
+      "title": { "ar": "الأكثر مبيعاً", "en": "Best Sellers" },
+      "path": "home.best-sellers"
+    },
+    {
+      "key": "promo-banner",
+      "title": { "ar": "بانر العروض الخاصة", "en": "Special Offers Banner" },
+      "path": "home.promo-banner"
+    },
+    {
+      "key": "new-arrivals",
+      "title": { "ar": "وصل حديثاً", "en": "New Arrivals" },
+      "path": "home.new-arrivals"
+    },
+    {
+      "key": "why-choose-us",
+      "title": { "ar": "لماذا تختارنا", "en": "Why Choose Us" },
+      "path": "home.why-choose-us"
+    },
+    {
+      "key": "testimonials",
+      "title": { "ar": "آراء العملاء", "en": "Customer Testimonials" },
+      "path": "home.testimonials"
+    },
+    {
+      "key": "newsletter",
+      "title": { "ar": "النشرة البريدية", "en": "Newsletter" },
+      "path": "home.newsletter"
+    }
+  ]
+}

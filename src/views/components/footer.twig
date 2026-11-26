@@ -1,0 +1,97 @@
+<footer class="gb-footer" role="contentinfo">
+  <div class="gb-footer-panel">
+    <div class="gb-footer-grid">
+      <div class="gb-footer-brand">
+        <img src="{{ 'images/logo.svg'|asset }}" alt="{{ trans('meta.store_name') }}" class="gb-footer-logo" width="160" height="40" />
+        <p class="gb-footer-desc" data-i18n="meta.store_description">{{ trans('meta.store_description') }}</p>
+
+        {% if theme.settings.get('social_instagram') or theme.settings.get('social_facebook') or theme.settings.get('social_tiktok') %}
+          <div class="gb-social-row">
+            {% if theme.settings.get('social_instagram') %}
+              <a href="{{ theme.settings.get('social_instagram') }}" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            {% endif %}
+            {% if theme.settings.get('social_facebook') %}
+              <a href="{{ theme.settings.get('social_facebook') }}" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            {% endif %}
+            {% if theme.settings.get('social_tiktok') %}
+              <a href="{{ theme.settings.get('social_tiktok') }}" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="gb-footer-col">
+        <h4 data-i18n="footer.quick_links">{{ trans('footer.quick_links') }}</h4>
+        <ul>
+          <li><a href="#/" data-i18n="nav.home">{{ trans('nav.home') }}</a></li>
+          <li><a href="#/shop" data-i18n="nav.shop">{{ trans('nav.shop') }}</a></li>
+          <li><a href="#/offers" data-i18n="nav.offers">{{ trans('nav.offers') }}</a></li>
+          <li><a href="#/about" data-i18n="nav.about">{{ trans('nav.about') }}</a></li>
+          <li><a href="#/contact" data-i18n="nav.contact">{{ trans('nav.contact') }}</a></li>
+        </ul>
+      </div>
+
+      <div class="gb-footer-col">
+        <h4 data-i18n="footer.categories">{{ trans('footer.categories') }}</h4>
+        <ul>
+          <li><a href="#/category/basketball" data-i18n="categories.basketball">{{ trans('categories.basketball') }}</a></li>
+          <li><a href="#/category/running" data-i18n="categories.running">{{ trans('categories.running') }}</a></li>
+          <li><a href="#/category/training" data-i18n="categories.training">{{ trans('categories.training') }}</a></li>
+          <li><a href="#/category/casual" data-i18n="categories.casual">{{ trans('categories.casual') }}</a></li>
+          <li><a href="#/offers" data-i18n="categories.offers">{{ trans('categories.offers') }}</a></li>
+        </ul>
+      </div>
+
+      <div class="gb-footer-col">
+        <h4 data-i18n="footer.payment_methods">{{ trans('footer.payment_methods') }}</h4>
+        <div class="gb-payment-badges" dir="ltr">
+          <!-- mada -->
+          <span class="gb-pay-badge" aria-label="mada">
+            <svg viewBox="0 0 64 24" width="54" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="5" width="7" height="6" rx="1.5" fill="#76BC21"/>
+              <rect x="2" y="13" width="7" height="6" rx="1.5" fill="#009FE3"/>
+              <text x="13" y="16.5" font-family="system-ui, sans-serif" font-size="12.5" font-weight="800" fill="#FFFFFF" letter-spacing="-0.3">mada</text>
+            </svg>
+          </span>
+          <!-- VISA -->
+          <span class="gb-pay-badge" aria-label="VISA">
+            <svg viewBox="0 0 58 24" width="48" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5 17.5h-3.2l2-11h3.2l-2 11Zm-6.6-11-3 7.6-.4-1.8-.9-4.7c-.1-.7-.7-1.1-1.4-1.1H6.1l-.1.4c1.2.3 2.4.8 3.2 1.4l2.7 9.2h3.4l5.1-11h-3.5Zm24.5 11h3l-2.6-11h-2.7c-.6 0-1.1.3-1.4.9l-4.8 10.1h3.4l.7-1.9h4.1l.3 1.9Zm-3.6-4.4 1.7-4.5.9 4.5h-2.6Zm-5.1-4.1.5-2.6s-1.5-.6-3.1-.6c-1.7 0-5.7.7-5.7 4.3 0 3.3 4.6 3.4 4.6 5.1 0 1.7-4.1 1.4-5.4.3l-.5 2.7s1.5.7 3.8.7c2.3 0 5.8-1.2 5.8-4.5 0-3.4-4.7-3.7-4.7-5.1 0-1.4 3.2-1.2 4.7-.3Z" fill="#FFFFFF"/>
+            </svg>
+          </span>
+          <!-- Mastercard -->
+          <span class="gb-pay-badge" aria-label="Mastercard">
+            <svg viewBox="0 0 48 24" width="42" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="12" r="7.5" fill="#EB001B"/>
+              <circle cx="30" cy="12" r="7.5" fill="#F79E1B"/>
+              <path d="M24 6.1a7.5 7.5 0 0 1 0 11.8 7.5 7.5 0 0 1 0-11.8Z" fill="#FF5F00"/>
+            </svg>
+          </span>
+          <!-- Apple Pay -->
+          <span class="gb-pay-badge" aria-label="Apple Pay">
+            <svg viewBox="0 0 68 24" width="58" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.2 7.2c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2Zm.9 1.5c-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.7-1.5 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.6 1.1 8.8.7 1.1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.2 0 1.9-1.1 2.7-2.1.8-1.2 1.2-2.4 1.2-2.5 0 0-2.3-.9-2.3-3.5 0-2.2 1.8-3.2 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7Z" fill="#FFFFFF"/>
+              <text x="27" y="16.8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Pay</text>
+            </svg>
+          </span>
+          <!-- Tabby -->
+          <span class="gb-pay-badge gb-pay-tabby" aria-label="Tabby">
+            <svg viewBox="0 0 64 24" width="56" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="32" y="16.5" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#0B1915" letter-spacing="-0.4">tabby</text>
+            </svg>
+          </span>
+          <!-- Tamara -->
+          <span class="gb-pay-badge gb-pay-tamara" aria-label="Tamara">
+            <svg viewBox="0 0 72 24" width="62" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="36" y="16.2" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12.5" font-weight="900" fill="#181412" letter-spacing="-0.3">tamara</text>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gb-footer-bottom">
+      <p data-i18n="footer.copyright">{{ trans('footer.copyright') }}</p>
+    </div>
+  </div>
+</footer>

@@ -7,3 +7,6 @@ theme-cover-1200x750.png
 theme-icon.png
 theme-icon.svg
 src/assets/images/products/orange-product.jpg
+
+# Product demo images (not part of theme template)
+src/assets/images/products/

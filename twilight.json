@@ -4,6 +4,7 @@
     "en": "GreenBird Luxury Theme"
   },
   "version": "1.0.0",
+  "type": "store",
   "description": {
     "ar": "قالب متجر سلة فاخر ومتحرك قابل للتخصيص بالكامل من محرر القوالب بدون كود، عربي RTL أولا مع دعم الإنجليزية LTR.",
     "en": "Luxury animated Salla Twilight theme, 100% customizable from the Theme Editor with zero code, Arabic RTL-first with English LTR."
